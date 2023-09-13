@@ -4,7 +4,13 @@ JavaScript Variables can be declared in 4 ways:
 --Automatically
 --Using var
 --Using let
---Using const -->
+--Using const
+
+The var keyword was used in all JavaScript code from 1995 to 2015.
+
+The let and const keywords were added to JavaScript in 2015.
+
+The var keyword should only be used in code written for older browsers.-->
 
 <!DOCTYPE html>
 <html>
@@ -14,6 +20,10 @@ JavaScript Variables can be declared in 4 ways:
 <p>In this example, x, y, and z are variables.</p>
 
 <p id="demo"></p>
+<p>In this example, a, b, and c are variables.</p>
+<p id="demo1"></p>
+<p>In this example, m, n, and p are variables.</p>
+<p id="demo2"></p>
 
 <script>
 var x = 5;
@@ -21,6 +31,20 @@ var y = 6;
 var z = x + y;
 document.getElementById("demo").innerHTML =
 "The value of z is: " + z;
+
+// Example using let
+let a = 5;
+let b = 8;
+let c = a + b;
+document.getElementById("demo1").innerHTML =
+"The value of c is: " + c;
+
+// Example using const
+const m = 5;
+const n = 9;
+const p = m + n;
+document.getElementById("demo2").innerHTML =
+"The value of p is: " + p;
 </script>
 
 </body>
