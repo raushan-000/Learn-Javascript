@@ -100,11 +100,14 @@ let r = ["a", "b", "c", "d", "e", "f", "g"];
 console.log(r.reverse());
 console.log(r);
 
+// Looping through array 
+
 // reduce method --> reduce an array to a single value
 function add(a, b) {
     return a + b;
 }
 const x = [1, 2, 3, 4, 5];
+
 // using function in syntax
 let sum = x.reduce(function (accumulator, currentValue) {
     return accumulator + currentValue;
@@ -113,3 +116,22 @@ console.log(sum);
 // using function define outside
 let sum1 = x.reduce(add);
 console.log(sum1);
+
+// Array.from --> used to create array from any other object
+
+// creating array from a string
+ const str = "Hello";
+ const strArray = Array.from(str);
+ console.log(strArray);
+
+ // creating an array from an iterable like onject
+
+ const iterableLike = {0:'a',1:'b',2:'c',length:3};
+ const arr = Array.from(iterableLike);
+ console.log(arr);
+
+ // Mapping element while creating array
+
+ const numbers1 = [2,3,4];
+ const squared = Array.from(numbers1,x=>x*x);
+console.log(squared);
