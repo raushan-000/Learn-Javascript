@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>alert-confirm-prompt</title>
+  </head>
+  <body>
+    <h3>alert prompt confirm</h3>
+    <script>
+      // aler always take value as string
+      alert("enter the value of a");
+      let a = prompt("enter a here", "54");
+
+      // alert("yoa entered a of data type "+(typeof a));
+      a = Number.parseInt(a);
+      alert("yoa entered a of data type " + typeof a);
+      let write = confirm("do yow want to write this to page");
+      if (write) {
+        document.write(a);
+      } else {
+        document.write("allow to write");
+      }
+    </script>
+  </body>
+</html>

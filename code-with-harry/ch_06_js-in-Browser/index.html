@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ch_06</title>
+    <link rel="stylesheet" href="style.css" />
+    <!-- <script src="index.js"></script> -->
+  </head>
+  <body>
+    <h1>this is h1 tag</h1>
+    <div>
+      <h2>this is me</h2>
+    </div>
+    <script>
+      // advantage of using separate scrift file using src attribute of script tag
+      // 1. separation of concerns
+      // 2. browser caching
+    </script>
+    <script src="index.js">
+      console.log("within source script tag"); // this will be ignored
+    </script>
+
+    <script>
+      // console object method
+      // check all output in console section in dev tools
+      console.log(console); // return all console method
+      console.error("this is an error");
+      console.warn("this is warning");
+      console.assert(5 < 2);
+      console.assert(5 > 2);
+      // console.clear(); // clear console
+      obj = { a: 1, b: 2, c: 3 };
+      console.table(obj);
+      console.info("this is info");
+      console.time("a");
+      console.timeLog("a");
+      console.time("b");
+      console.timeEnd("b");
+
+      console.time("forLoop");
+      for (let i = 0; i < 5; i++) {
+        console.log(233);
+      }
+      console.timeEnd("forLoop");
+
+      console.time("whileLoop");
+      let i = 0;
+      while (i < 5) {
+        console.log(233);
+        i++;
+      }
+      console.timeEnd("whileLoop");
+    </script>
+  </body>
+</html>

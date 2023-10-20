@@ -1,0 +1,29 @@
+<script>
+  const secretNumber = Math.floor(Math.random() * 100 + 1);
+
+  let attempts = 0;
+  let guess;
+  let isCorrect = false;
+
+  function checkGuess() {
+    attempts++;
+    if (guess === secretNumber) {
+      isCorrect = true;
+      alert(
+        `congratulations you guessed the number ${secretNumber} in ${attempts} attempts`
+      );
+    } else if (guess < secretNumber) {
+      alert("try higher number");
+    } else {
+      alert("try lower number");
+    }
+  }
+  while (!isCorrect) {
+    guess = parseInt(prompt("guess no. b/w 1 to 100"));
+    if (isNaN(guess) || guess < 1 || guess > 100) {
+      alert("enter valid no.");
+    } else {
+      checkGuess();
+    }
+  }
+</script>

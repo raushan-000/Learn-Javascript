@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM collection</title>
+</head>
+ <!-- first child of body -->
+<body><div>
+        <div class="first">first</div>
+        <div class="second">second</div>
+        <script>
+            console.log(document.body.firstChild)
+          a =   document.body.firstChild
+         // console.log(document.body.firstChild.parentNode)
+          console.log(a.parentNode)
+          console.log(a.parentElement) //return if parent is element
+          // return null because html is not a element
+          console.log(document.documentElement.parentElement)
+          console.log(a.firstChild.nextSibling);
+        </script>
+    </div>
+</body>
+</html>

@@ -120,18 +120,18 @@ console.log(sum1);
 // Array.from --> used to create array from any other object
 
 // creating array from a string
- const str = "Hello";
- const strArray = Array.from(str);
- console.log(strArray);
+const str = "Hello";
+const strArray = Array.from(str);
+console.log(strArray);
 
- // creating an array from an iterable like onject
+// creating an array from an iterable like onject
 
- const iterableLike = {0:'a',1:'b',2:'c',length:3};
- const arr = Array.from(iterableLike);
- console.log(arr);
+const iterableLike = { 0: 'a', 1: 'b', 2: 'c', length: 3 };
+const arr = Array.from(iterableLike);
+console.log(arr);
 
- // Mapping element while creating array
+// Mapping element while creating array
 
- const numbers1 = [2,3,4];
- const squared = Array.from(numbers1,x=>x*x);
+const numbers1 = [2, 3, 4];
+const squared = Array.from(numbers1, x => x * x);
 console.log(squared);

@@ -44,7 +44,7 @@ console.log(numbers1.map(function(number){
     return number*3;
 }));
 
-// Filter method --> creates a new array containing element that passes a test defined by a aprovide function
+// Filter method --> creates a new array containing element that passes a test defined by a provide function
 
 function evenNumber(num){
     return num %2===0;

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Element only navigation</title>
+    <style>
+        html,body{
+            height: 100%;
+            width: 100%;
+            margin: 0;
+            padding: 0;
+        }
+        ul{
+            display: flex;
+            background: greenyellow;
+            margin: 0;
+            padding: 5px;
+        }
+        ul li{
+            list-style: none;
+            margin: 0 23px;
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <ul>
+            <li>Home</li>
+            <li>About me</li>
+            <li>Hire me</li>
+        </ul>
+    </nav>
+    <p>this is me</p>
+    <script>
+const changeBgRed = ()=>{
+    document.body.firstElementChild.style.background = 'red'
+}
+
+        let b=document.body
+        console.log("First child of b is:",b.firstChild)
+        console.log("First element child of b:", b.firstElementChild)
+        //changeBgRed()
+    </script>
+</body>
+</html>
