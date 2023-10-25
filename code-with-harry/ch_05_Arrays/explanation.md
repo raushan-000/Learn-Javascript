@@ -1,3 +1,5 @@
+# for...of loop and for...each loop
+
 The `for...of` loop in JavaScript is used for iterating over iterable objects, including arrays, strings, maps, sets, and more. It provides a more concise and readable way to loop through the elements of an iterable without dealing with explicit index management. Here's the basic syntax of a `for...of` loop:
 
 ```javascript

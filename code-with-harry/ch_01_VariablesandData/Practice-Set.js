@@ -25,3 +25,4 @@ const dict = {
 console.log(dict);
 console.log(dict.yakka);
 console.log(dict['ataraxia']);
+console.log('😉😉😔');
