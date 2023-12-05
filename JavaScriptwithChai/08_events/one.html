@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>HTML events</title>
+</head>
+
+<body>
+    <h2>images</h2>
+    <div>
+        <ul id="images">
+            <li>
+                <img width="100px" id="photoshop" src="/JavaScriptwithChai/08_events/Pic .jpeg" alt="photoshop" />
+            </li>
+            <li>
+                <img width="100px" id="japan" src="/JavaScriptwithChai/08_events/Pic .jpeg" alt="" />
+            </li>
+            <li>
+                <img width="100px" id="river" src="/JavaScriptwithChai/08_events/Pic .jpeg" alt="" />
+            </li>
+            <li>
+                <img width="100px" id="owl" src="/JavaScriptwithChai/08_events/Pic .jpeg" alt="" />
+            </li>
+            <li>
+                <img width="100px" id="prayer" src="/JavaScriptwithChai/08_events/Pic .jpeg" alt="photoshop" />
+            </li>
+            <li><a href="https://google.com" id="google">Google</a></li>
+            <li>
+                <p id="para">demo</p>
+            </li>
+        </ul>
+    </div>
+</body>
+<script>
+    /* not better approach
+    document.getElementById('owl').onclick=function(){
+        alert('owl clicked')
+    }
+    */
+    /*
+    // another approach for onClick event
+   // attachEvent()
+   // jQuery - onevent listener
+
+// for interview
+// type, timestamp, preventDefault
+// target, toElement, srcElement, currentTarget   
+// clientX, clientY, screenX, screenY
+// altKey,ctrlkey, shiftkey, keycode
+*/
+/*
+    document.getElementById("owl").addEventListener(
+        "click",
+        function () {
+            alert("owl clicked again");
+        },
+        false
+    );
+
+    document.getElementById("owl").addEventListener(
+        "click",
+        function (e) {
+            console.log(e);
+        },
+        false
+    );
+*/
+
+/*
+    document.getElementById("images").addEventListener(
+        "click",
+        function (e) {
+            console.log("clicked inside ul");
+        },
+        true
+    );
+    document.getElementById("owl").addEventListener(
+        "click",
+        function (e) {
+            console.log("owl clicked");
+        },
+        true
+    );
+
+    // to stop bubbling
+    document.getElementById("images").addEventListener(
+        "click",
+        function (e) {
+            console.log("clicked inside ul");
+        },
+        false
+    );
+    document.getElementById("owl").addEventListener("click", function (e) {
+        console.log("owl clicked");
+        e.stopPropagation();
+    });
+*/
+
+/*
+    document.getElementById("google").addEventListener("click", function (e) {
+        console.log("google clicked, default prevented");
+        e.preventDefault(); // prevent default activity
+        // e.stopPropagation() // to prevent bubbling
+    });
+*/
+
+    // to remove images
+  //  document.querySelector("#images").addEventListener("click", function (e) {
+       // console.log(e.target.parentNode);
+       // let removeIt = e.target.parentNode;
+      //  removeIt.remove();
+        // another method
+        //removeIt.parentNode.removeChild(removeIt)
+  //  });
+
+    // when we click on image, then it will work, but when we click on list item
+    // then it willl remove all thing because parent of li is ul, in removeIt variable ul is called
+    // and it remove all thing, so we will add some checks, below is code for that
+
+    document.querySelector("#images").addEventListener("click", function (e) {
+        console.log(e.target.tagName);
+        if (e.target.tagName === "IMG") {
+            console.log(e.target.id);
+            let removeIt = e.target.parentNode;
+            removeIt.remove();
+        }
+    });
+</script>
+
+</html>
