@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1>chai aur js</h1>
+    <button id="start">start</button>
+    <button id="stop">stop</button>
+  </body>
+  <script>
+    const sayDate =function(){
+        console.log('raushan',Date.now());
+    }
+  //  setInterval(sayDate, 2000)
+    const sayDate1 =function(str){
+        console.log(str,Date.now());
+    }
+   // setInterval(sayDate1, 2000, "hi")
+
+   const stopInterval = setInterval(function(){
+        console.log('raushan',Date.now());
+    },3000)
+    clearInterval(stopInterval)
+  </script>
+</html>

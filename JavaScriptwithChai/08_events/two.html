@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1>chai aur code</h1>
+    <button id="stop">stop</button>
+  </body>
+  <script>
+    // setTimeout(function(){
+    //     console.log('raushan');
+    // }, 2000)
+
+    const sayRaushan = function () {
+      console.log("raushan");
+    };
+    const changeText = function () {
+      document.querySelector("h1").innerHTML = "best js series";
+    };
+
+    setTimeout(sayRaushan, 3000);
+    //setTimeout(changeText, 2000)
+
+    // to remove setTimeout
+    const changeMe = setTimeout(changeText, 2000);
+    //clearTimeout(changeMe)
+
+    // clearTimeout on button
+    // when we click on stop button text will not change
+    document.querySelector("#stop").addEventListener("click", function () {
+      clearTimeout(changeMe);
+      console.log("stopped");
+    });
+  </script>
+</html>
